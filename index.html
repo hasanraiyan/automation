@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M3 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </div>
+
+        <div class="select-ai" style="position: relative;">
+            <span class="ai">openGPT</span>
+            <span class="ai-list">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M5.293 9.293a1 1 0 0 1 1.414 0L12 14.586l5.293-5.293a1 1 0 1 1 1.414 1.414l-6 6a1 1 0 0 1-1.414 0l-6-6a1 1 0 0 1 0-1.414"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </span>
+        </div>
+        <div class="ai-list-item  " style="position: absolute;">
+            <p>chatgpt</p>
+            <p>gemini</p>
+        </div>
+
+        <div class="new-chat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M15.673 3.913a3.121 3.121 0 1 1 4.414 4.414l-5.937 5.937a5 5 0 0 1-2.828 1.415l-2.18.31a1 1 0 0 1-1.132-1.13l.311-2.18A5 5 0 0 1 9.736 9.85zm3 1.414a1.12 1.12 0 0 0-1.586 0l-5.937 5.937a3 3 0 0 0-.849 1.697l-.123.86.86-.122a3 3 0 0 0 1.698-.849l5.937-5.937a1.12 1.12 0 0 0 0-1.586M11 4A1 1 0 0 1 10 5c-.998 0-1.702.008-2.253.06-.54.052-.862.141-1.109.267a3 3 0 0 0-1.311 1.311c-.134.263-.226.611-.276 1.216C5.001 8.471 5 9.264 5 10.4v3.2c0 1.137 0 1.929.051 2.546.05.605.142.953.276 1.216a3 3 0 0 0 1.311 1.311c.263.134.611.226 1.216.276.617.05 1.41.051 2.546.051h3.2c1.137 0 1.929 0 2.546-.051.605-.05.953-.142 1.216-.276a3 3 0 0 0 1.311-1.311c.126-.247.215-.569.266-1.108.053-.552.06-1.256.06-2.255a1 1 0 1 1 2 .002c0 .978-.006 1.78-.069 2.442-.064.673-.192 1.27-.475 1.827a5 5 0 0 1-2.185 2.185c-.592.302-1.232.428-1.961.487C15.6 21 14.727 21 13.643 21h-3.286c-1.084 0-1.958 0-2.666-.058-.728-.06-1.369-.185-1.96-.487a5 5 0 0 1-2.186-2.185c-.302-.592-.428-1.233-.487-1.961C3 15.6 3 14.727 3 13.643v-3.286c0-1.084 0-1.958.058-2.666.06-.729.185-1.369.487-1.961A5 5 0 0 1 5.73 3.545c.556-.284 1.154-.411 1.827-.475C8.22 3.007 9.021 3 10 3A1 1 0 0 1 11 4">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <div class="main">
+        <!-- User Input and AI Output Example -->
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>Hi</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+        </div>
+
+        <!-- Repeat for 10 interactions -->
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>Can you tell me about prime numbers?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Prime numbers are natural numbers greater than 1 that cannot be formed by multiplying two smaller
+                    natural numbers. For example, 2, 3, 5, and 7 are prime numbers.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>What are some recent breakthroughs in mathematics?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Recent breakthroughs include progress in the field of prime number theory, like new insights into the
+                    distribution of primes, and advances in understanding the Navier-Stokes equations in fluid dynamics.
+                </p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>Can you explain the Riemann Hypothesis?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>The Riemann Hypothesis is a conjecture about the distribution of the zeros of the Riemann zeta
+                    function. It suggests that all non-trivial zeros of the zeta function have a real part equal to 1/2.
+                </p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>What are some applications of prime numbers?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Prime numbers are used in cryptography, particularly in public-key algorithms like RSA, to secure
+                    communications. They also have applications in hashing algorithms and error detection codes.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>What is the importance of mathematical proofs?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Mathematical proofs are crucial because they provide a logical foundation for the validity of
+                    mathematical statements and theories. They ensure that conclusions are based on rigorous reasoning
+                    and are universally accepted.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>Can you explain what a theorem is?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>A theorem is a statement that has been proven to be true based on axioms and previously established
+                    theorems. It is a logical consequence derived from a set of assumptions.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>What are axioms in mathematics?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Axioms are basic, foundational statements or assumptions that are accepted without proof. They serve
+                    as the starting point for building logical arguments and deriving theorems.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>How do mathematicians use proofs to advance knowledge?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Mathematicians use proofs to validate new concepts, build on existing theories, and explore new areas
+                    of mathematics. Proofs provide a solid foundation for advancing knowledge and solving complex
+                    problems.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>What is the role of conjectures in mathematics?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>Conjectures are statements that are believed to be true based on observations but have not yet been
+                    proven. They play a crucial role in guiding research and motivating mathematicians to seek proofs or
+                    counterexamples.</p>
+            </div>
+        </div>
+
+        <div class="user-input-container">
+            <div class="user-input">
+                <p>Can you give an example of a famous conjecture?</p>
+            </div>
+        </div>
+        <div class="ai-output-container">
+            <div class="ai-icon">
+                <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
+            </div>
+            <div class="ai-output">
+                <p>One famous example is the Goldbach Conjecture, which proposes that every even integer greater than 2
+                    can be expressed as the sum of two prime numbers. It remains unproven to this day.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="input-box">
+        <div class="input-border">
+            <div class="input-container" style="width: 80%;flex-grow: 1;">
+                <input type="text" placeholder="Type your message here...">
+            </div>
+            <div class="send-btn" style="margin: 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32"
+                    class="icon-2xl">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M15.192 8.906a1.143 1.143 0 0 1 1.616 0l5.143 5.143a1.143 1.143 0 0 1-1.616 1.616l-3.192-3.192v9.813a1.143 1.143 0 0 1-2.286 0v-9.813l-3.192 3.192a1.143 1.143 0 1 1-1.616-1.616z"
+                        clip-rule="evenodd"></path>
+                </svg>
+    
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
