@@ -22,6 +22,8 @@ body {
     flex-direction: column;
 }
 
+/* page */
+
 /* Header styling */
 .header {
     display: flex;
@@ -41,12 +43,98 @@ body {
     cursor: pointer;
 }
 
+.sidebar-open{
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 0px 20px 0px;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column ;
+}
+
+.sidebar-open .header-panel {
+    background-color: #f7f7f7;
+    line-height: 1.5;
+    padding: .6rem;
+}
+
+.sidebar-open .header-panel .search-panel{
+    background-color: transparent;
+    border: 1px solid black;
+    box-shadow: 2px 6px 20px 7px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    padding: .5rem; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-open .header-panel .search-panel input{
+    font-size: 1rem;
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: .5rem;
+}
+
+.sidebar-open .main-panel{
+    background-color: red;
+    flex: 1;
+
+}
+
+.sidebar-open .footer-panel{
+    padding: .5rem;
+    width: 100%;
+    
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-panel .user-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-panel .user-data .user-logo{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .2rem;
+    text-align: center;
+    vertical-align: center;
+}
+
+.footer-panel .user-data .user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-panel  .more{
+    font-size: 1rem;
+}
+
+
 .hidden {
     display: none;
 }
 
 .ai-list-item {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
     position: absolute;
@@ -55,6 +143,19 @@ body {
     line-height: 1.5;
     border-radius: 10px;
     min-width: 90%;
+    max-height: 50vh;
+    overflow: auto;
+
+}
+
+.ai-list-item p {
+    padding: .5rem;
+    border-bottom: 1px solid #cbc6c6;
+}
+
+.ai-list-item p:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
 }
 
 /* AI selection area */
@@ -122,6 +223,7 @@ body {
 
 .ai-icon {
     margin-right: 0.5rem;
+
 }
 
 .ai-output {
@@ -136,7 +238,7 @@ body {
     width: 100vw;
     display: flex;
     padding-left: 10px;
-     padding-right: 10px;
+    padding-right: 10px;
     gap: 10px;
     flex-direction: row;
     align-items: center;

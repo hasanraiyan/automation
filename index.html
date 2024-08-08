@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Interface</title>
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="./style.css">
-    <style>
-
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
     <div class="header">
         <div class="sidebar">
@@ -21,8 +17,30 @@
                     clip-rule="evenodd"></path>
             </svg>
         </div>
-
-        <div class="select-ai" style="position: relative;">
+        <div class="sidebar-open">
+            <div class="header-panel">
+                <div class="search-panel">
+                    <input type="text" name="search-panel" id="search" placeholder="Search here">
+                </div>
+            </div>
+            <div class="main-panel">
+                main
+            </div>
+            <div class="footer-panel">
+               <div class="user-data">
+                <div class="user-logo">
+                    RH
+                </div>
+                <div class="user-name">
+                    Raiyan Hasan
+                </div>
+               </div>
+                <div class="more">
+                    ...
+                </div>
+            </div>
+        </div>
+        <div class="select-ai">
             <span class="ai">openGPT</span>
             <span class="ai-list">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -32,7 +50,7 @@
                 </svg>
             </span>
         </div>
-        <div class="ai-list-item  " style="position: absolute;">
+        <div class="ai-list-item hidden">
             <p>chatgpt</p>
             <p>gemini</p>
         </div>
@@ -45,13 +63,16 @@
             </svg>
         </div>
     </div>
+
     <div class="main">
-        <!-- User Input and AI Output Example -->
+
         <div class="user-input-container">
             <div class="user-input">
-                <p>Hi</p>
+                <p>Hey, How are you?
+                </p>
             </div>
         </div>
+
         <div class="ai-output-container">
             <div class="ai-icon">
                 <img src="./images/icon-144.png" height="60px" alt="Chatbot Icon">
@@ -61,7 +82,7 @@
             </div>
         </div>
 
-        <!-- Repeat for 10 interactions -->
+
         <div class="user-input-container">
             <div class="user-input">
                 <p>Can you tell me about prime numbers?</p>
@@ -216,9 +237,9 @@
                     can be expressed as the sum of two prime numbers. It remains unproven to this day.</p>
             </div>
         </div>
-
-
     </div>
+
+
     <div class="input-box">
         <div class="input-border">
             <div class="input-container" style="width: 80%;flex-grow: 1;">
@@ -235,7 +256,7 @@
             </div>
         </div>
     </div>
+    
     <script src="./script.js"></script>
 </body>
-
 </html>
