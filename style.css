@@ -43,7 +43,7 @@ body {
     cursor: pointer;
 }
 
-.sidebar-open{
+.sidebar-open {
     z-index: 5;
     background-color: rgb(255, 255, 255);
     box-shadow: 2px 0px 20px 0px;
@@ -51,10 +51,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 80vw;
+    width: 70vw;
     height: 100vh;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
 }
 
 .sidebar-open .header-panel {
@@ -63,19 +63,19 @@ body {
     padding: .8rem;
 }
 
-.sidebar-open .header-panel .search-panel{
+.sidebar-open .header-panel .search-panel {
     background-color: transparent;
     border: 1px solid black;
     box-shadow: 2px 6px 20px 7px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
-    padding: .5rem; 
+    padding: .5rem;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sidebar-open .header-panel .search-panel input{
+.sidebar-open .header-panel .search-panel input {
     font-size: 1rem;
     position: relative;
     width: 100%;
@@ -85,59 +85,177 @@ body {
     margin-left: .5rem;
 }
 
-.sidebar-open .main-panel{
+.sidebar-open .main-panel {
     background-color: red;
     flex: 1;
 
 }
 
-.sidebar-open .footer-panel{
+.sidebar-open .footer-panel {
     padding: .5rem;
     width: 100%;
-    
-   display: flex;
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-panel .user-data{
+.footer-panel .user-data {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.footer-panel .user-data .user-logo{
+.footer-panel .user-data .user-logo {
     background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     padding: .2rem;
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     vertical-align: center;
 }
 
-.footer-panel .user-data .user-name{
+.footer-panel .user-data .user-name {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer-settings{
-    position:absolute;
-    bottom:4rem;
-    border:2px solid white;
-    background-color:white;
-    box-shadow:-2px 3px 18px 0px;
-    width:95%;
-    height:15rem;
-    border-radius:12px;
-}
-     
+.footer-settings {
+    position: absolute;
+    bottom: 4rem;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: -2px 3px 18px 0px;
+    width: 95%;
+    height: auto;
+    border-radius: 12px;
+    padding: 1rem;
 
+}
+
+.footer-settings .user-mail {
+    color: #7d7d7d;
+    text-align: center;
+    line-height: 1.5;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+.footer-settings .user-logout {
+    border-top: 1px solid #7d7d7d;
+}
+
+.footer-settings .footer-settings-option {
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+    align-items: center;
+    /* border: 1px solid rgb(75, 49, 49); */
+    margin: .5rem;
+    padding: .5rem;
+
+}
+
+.log-out {
+    border-top: 1px solid #7d7d7d;
+}
+
+.customize-gpt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customize-gpt .container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    padding: auto;
+    margin: auto;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: ; */
+}
+
+.customize-gpt .container .text {
+    padding: .5rem;
+    margin: .5rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #7d7d7d;
+}
+
+.customize-gpt .container .llm-instruction {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+    margin: .5rem;
+}
+.customize-gpt .container .llm-instruction svg{
+    height: 1rem;
+    color: #7d7d7d;
+}
+.customize-gpt .container input{
+    padding: .5rem;
+    width: 90%;
+    height: 10rem;
+    margin: 1rem;
+    margin-top: 0;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+
+}
+
+.customize-gpt .container .btn{
+    padding: .5rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    align-self: center;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.customize-gpt .container .btn.save{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+
+/* write code for hover state work  left */
+.customize-gpt .container .btn.save:hover{
+
+
+}
+.customize-gpt .container .btn.cancel{
+    border: 2px solid #7d7d7d;
+    background-color: white;
+    font-weight: 500;
+}
+.customize-gpt .container .btn.cancel:hover{
+
+}
 
 .hidden {
     display: none;
