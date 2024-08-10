@@ -1,7 +1,5 @@
  const aiList=["ollama","jarvis","friday","hacksmith","rayan"]
 
-let aiList;
-
 
 // show available ai list
 const showAiList =(arr)=>{
