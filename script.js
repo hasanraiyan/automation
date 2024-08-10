@@ -1,11 +1,14 @@
 // Define global variables
 let aiList = [];
 let selectedAi = null;
-let aiListItem = document.querySelector(".ai-list-item");
-let selectedAiElement = document.querySelector(".ai");
-let selectAi = document.querySelector(".select-ai");
-let sidebarButton = document.querySelectorAll(".sidebar");
-let sidebar = document.querySelector(".sidebar-open");
+const aiListItem = document.querySelector(".ai-list-item");
+const selectedAiElement = document.querySelector(".ai");
+const selectAi = document.querySelector(".select-ai");
+const sidebarButton = document.querySelectorAll(".sidebar");
+const sidebar = document.querySelector(".sidebar-open");
+const searchInput = document.querySelector('#search');
+const chatHistoryItems = document.querySelectorAll('.chat-history');
+const userPanel= document.querySelector(".footer-panel");
 
 // Fetch AI list from the API
 async function getAiList() {
@@ -68,7 +71,7 @@ const createAiList = () => {
 selectAi.addEventListener("click", () => {
     createAiList();
     if (aiListItem) {
-        aiListItem.classList.toggle("hidden");
+        aiListItem.classList.toggle("hide");
         selectAi.classList.toggle("backgroundColor");
     }
 });
@@ -79,7 +82,24 @@ sidebarButton.forEach((e)=>{
         sidebar.classList.toggle("hidden");
     });
 })
+// add event listener in search to search history
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+  
+    chatHistoryItems.forEach(item => {
+      const itemText = item.textContent.toLowerCase();
+      if (itemText.includes(searchTerm)) {
+        item.classList.remove('hide');
+      } else {
+        item.classList.add('hide');
+      }
+    });
+  });
 
+//   user panel settings
+userPanel.addEventListener("click",(e)=>{
+    console.log(e);
+})
 
 // Initial call to populate AI list
 createAiList();
