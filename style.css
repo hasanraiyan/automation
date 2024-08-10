@@ -58,7 +58,7 @@ body {
 }
 
 .sidebar-open .header-panel {
-    background-color: #f7f7f7;
+    background-color: rgb(255, 255, 255);
     line-height: 1.5;
     padding: .8rem;
 }
@@ -66,7 +66,7 @@ body {
 .sidebar-open .header-panel .search-panel {
     background-color: transparent;
     border: 1px solid black;
-    box-shadow: 2px 6px 20px 7px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 6px 20px 7px rgba(0, 0, 0, 0.1); */
     font-size: 1.2rem;
     padding: .5rem;
     border-radius: 50px;
@@ -80,13 +80,14 @@ body {
     position: relative;
     width: 100%;
     outline: none;
+
     border: none;
     background-color: transparent;
     margin-left: .5rem;
 }
 
 .sidebar-open .main-panel {
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     flex: 1;
 
 }
@@ -94,10 +95,10 @@ body {
 .sidebar-open .footer-panel {
     padding: .5rem;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #7d7d7d;
 }
 
 .footer-panel .user-data {
@@ -163,9 +164,10 @@ body {
 
 }
 
-.log-out {
+
+.footer-settings .log-out {
     border-top: 1px solid #7d7d7d;
-    
+    padding-top: 1rem;
 }
 
 .customize-gpt {
@@ -180,7 +182,7 @@ body {
     align-items: center;
 }
 
-.customize-gpt .container {
+.container {
     background-color: rgb(255, 255, 255);
     position: relative;
     border-radius: 12px;
@@ -188,32 +190,49 @@ body {
     width: 90%;
     padding: auto;
     margin: auto;
-    min-height: 50%;
+    max-height: 50%;
     display: flex;
-    flex-direction: column;
-    /* align-items: ; */
+    flex-direction: column; 
+    overflow: auto;
+
 }
 
-.customize-gpt .container .text {
+.container .text {
     padding: .5rem;
     margin: .5rem;
     font-weight: 800;
     font-size: 1.2rem;
     border-bottom: 1px solid #7d7d7d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: center;
 }
 
-.customize-gpt .container .llm-instruction {
+.container .text .close {
+    color: black;
+
+    font-weight: 300;
+}
+
+.container .text .close:hover {
+    cursor: pointer;
+}
+
+.container .llm-instruction {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: .5rem;
     margin: .5rem;
 }
-.customize-gpt .container .llm-instruction svg{
+
+.container .llm-instruction svg {
     height: 1rem;
     color: #7d7d7d;
 }
-.customize-gpt .container input{
+
+.container textarea {
     padding: .5rem;
     width: 90%;
     height: 10rem;
@@ -224,11 +243,26 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    
-
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    resize: vertical;
+    outline: none;
 }
 
-.customize-gpt .container .btn{
+.container textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.customize-gpt .container textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+
+.customize-gpt .container .btn {
     padding: .5rem;
     margin-bottom: 1rem;
     width: 80%;
@@ -237,7 +271,7 @@ body {
     border-radius: 30px;
 }
 
-.customize-gpt .container .btn.save{
+.customize-gpt .container .btn.save {
     background-color: black;
     color: white;
     border: 2px solid black;
@@ -245,19 +279,71 @@ body {
 
 
 /* write code for hover state work  left */
-.customize-gpt .container .btn.save:hover{
+.customize-gpt .container .btn.save:hover {}
 
-
-}
-.customize-gpt .container .btn.cancel{
+.customize-gpt .container .btn.cancel {
     border: 2px solid #7d7d7d;
     background-color: white;
     font-weight: 500;
 }
-.customize-gpt .container .btn.cancel:hover{
+
+.customize-gpt .container .btn.cancel:hover {}
+
+/* settings */
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+}
+
+.settings .container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    padding: auto;
+    margin: auto;
+    /* min-height: 50%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.settings .container .container-end {
+    padding: .5rem;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
 }
 
+.settings .container .container-end input {
+    padding: .5rem;
+}
+
+/* my gpts */
+.my-gpts-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-gpts-list .container .gpts{
+    padding: .5rem;
+    margin: .5rem;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
 .hidden {
     display: none;
 }
