@@ -1,4 +1,4 @@
-// const aiList=["ollama","jarvis","friday","hacksmith","rayan"]
+ const aiList=["ollama","jarvis","friday","hacksmith","rayan"]
 
 let aiList;
 
