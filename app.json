@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "chatbot",
+    "slug": "snack-7e72ec78-b70b-4bcf-b216-03a04e944c40",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.raiyan.chatbot"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "81f665a6-d715-4e42-a0c1-f3f4a5068c07"
+      }
+    }
+  }
+}
